@@ -4,7 +4,6 @@ import Header from "./components/atoms/Header";
 import * as quoteData from "./utils/testdata.json";
 import "./styles/index.css";
 
-
 function App() {
   const qoutes = [
     quoteData.quote1,
@@ -15,23 +14,23 @@ function App() {
   ];
   return (
     <>
-    <div id="Header">
-      <Header />
-    </div>
-    <div id="quoteContainer">
-      {qoutes.map((quote) => {
-        return (
-          <Quote
-            key={quote.id}
-            content={quote.content}
-            quoted={quote.quoted}
-            author={quote.author}
-            context={quote.context}
-            timestamp={quote.timestamp}
-          />
-        );
-      })}
-    </div>
+      <div id="Header">
+        <Header />
+      </div>
+      <div id="quoteContainer">
+        {qoutes.map((quote) => {
+          return (
+            <Quote
+              key={quote.id}
+              content={quote.content}
+              quoted={quote.quoted}
+              author={quote.author}
+              context={quote.context}
+              timestamp={quote.timestamp}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }
