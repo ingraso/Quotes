@@ -3,6 +3,7 @@ import { Quote } from "./components/atoms/Quote";
 import Header from "./components/atoms/Header";
 import * as quoteData from "./utils/testdata.json";
 import "./styles/index.css";
+import { AddQuoteForm } from "./components/atoms/AddQuoteForm";
 
 function App() {
   const qoutes = [
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <Header />
+      <AddQuoteForm />
       <div id="quoteContainer">
         {qoutes.map((quote) => {
           return (
