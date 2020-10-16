@@ -1,6 +1,9 @@
 import React from "react";
 import { Quote } from "./components/atoms/Quote";
+import Header from "./components/atoms/Header";
 import * as quoteData from "./utils/testdata.json";
+import "./styles/index.css";
+
 
 function App() {
   const qoutes = [
@@ -11,6 +14,10 @@ function App() {
     quoteData.quote5,
   ];
   return (
+    <>
+    <div id="Header">
+      <Header />
+    </div>
     <div id="quoteContainer">
       {qoutes.map((quote) => {
         return (
@@ -25,6 +32,7 @@ function App() {
         );
       })}
     </div>
+    </>
   );
 }
 
