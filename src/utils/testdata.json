@@ -1,0 +1,42 @@
+{
+  "quote1": {
+    "id": "1",
+    "content": "Du ligger dårligere bak enn meg",
+    "quoted": "Karoline Sæbø",
+    "author": "Ingrid Amalie Solbjørg",
+    "timestamp": "2020-09-26T13:49:00",
+    "context": "IR øving eller fag generelt"
+  },
+  "quote2": {
+    "id": "2",
+    "content": "5 meter uten luftlinje",
+    "quoted": "Ingrid Amalie Solbjørg",
+    "author": "Sigrid Greiff Elnan",
+    "timestamp": "2020-04-26T14:57:14",
+    "context": "Hvor langt det var fra rommet til kjøkkenet i Nittedal"
+  },
+  "quote3": {
+    "id": "3",
+    "content": "Man må gi seg, av og til hvertfall",
+    "quoted": "Karoline Langli",
+    "author": "Anonymous",
+    "timestamp": "2020-04-13T19:44:38",
+    "context": "Retting av MMI-tekst"
+  },
+  "quote4": {
+    "id": "4",
+    "content": "4 tomme hjerner er bedre enn 3",
+    "quoted": "Sigrid Greiff Elnan",
+    "author": "Anonymous",
+    "timestamp": "2020-03-03T11:23:08",
+    "context": ""
+  },
+  "quote5": {
+    "id": "5",
+    "content": "Hvilken bruk av bruker bruker du?",
+    "quoted": "Vilde Voss Stabell",
+    "author": "Sigrid Greiff Elnan",
+    "timestamp": "2020-04-03T15:15:58",
+    "context": ""
+  }
+}
