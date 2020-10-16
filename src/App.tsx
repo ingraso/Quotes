@@ -1,5 +1,6 @@
 import React from "react";
 import { Quote } from "./components/atoms/Quote";
+import { AddQuoteForm } from "./components/atoms/AddQuoteForm";
 import * as quoteData from "./utils/testdata.json";
 
 function App() {
@@ -11,20 +12,23 @@ function App() {
     quoteData.quote5,
   ];
   return (
-    <div id="quoteContainer">
-      {qoutes.map((quote) => {
-        return (
-          <Quote
-            key={quote.id}
-            content={quote.content}
-            quoted={quote.quoted}
-            author={quote.author}
-            context={quote.context}
-            timestamp={quote.timestamp}
-          />
-        );
-      })}
-    </div>
+    <>
+      <AddQuoteForm />
+      <div id="quote-container">
+        {qoutes.map((quote) => {
+          return (
+            <Quote
+              key={quote.id}
+              content={quote.content}
+              quoted={quote.quoted}
+              author={quote.author}
+              context={quote.context}
+              timestamp={quote.timestamp}
+            />
+          );
+        })}
+      </div>
+    </>
   );
 }
 
