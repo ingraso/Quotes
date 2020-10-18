@@ -1,13 +1,10 @@
-#Header {
+#headerContainer {
   background-color: #45d1c8;
   color: #151834;
   text-align: center;
   margin: 0%;
   padding: 15px;
   border-bottom: 4px solid #f2f4f7;
-}
-
-#headerContainer {
   justify-content: center;
 }
 

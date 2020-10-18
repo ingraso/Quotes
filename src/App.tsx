@@ -14,9 +14,7 @@ function App() {
   ];
   return (
     <>
-      <div id="Header">
-        <Header />
-      </div>
+      <Header />
       <div id="quoteContainer">
         {qoutes.map((quote) => {
           return (
