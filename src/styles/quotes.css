@@ -1,20 +1,27 @@
 #quoteContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .quote {
   border-radius: 1%;
-  border: 1px solid #eeeeee;
+  border: 2px solid #f2f4f7;
   padding: 15px;
   margin: 20px;
   max-width: 300px;
+  background-color: #f2f4f7;
+}
+
+.quote:hover {
+  border: 2px solid #ffe600;
+  background-color: #ffffff;
 }
 
 h3 {
   font-family: sans-serif;
   font-style: italic;
-  color: green;
+  color: #0b615b;
 }
 
 .italic {
