@@ -1,38 +1,21 @@
 import React from "react";
-import { Quote } from "./components/atoms/Quote";
 import Header from "./components/atoms/Header";
-import * as quoteData from "./utils/testdata.json";
 import "./styles/index.css";
 import { AddQuoteForm } from "./components/atoms/AddQuoteForm";
+import { BrowserRouter, Route } from "react-router-dom";
+import QuoteContainer from "./components/atoms/QuoteContainer";
 
-function App() {
-  const qoutes = [
-    quoteData.quote1,
-    quoteData.quote2,
-    quoteData.quote3,
-    quoteData.quote4,
-    quoteData.quote5,
-  ];
-  return (
-    <>
-      <Header />
-      <AddQuoteForm />
-      <div id="quoteContainer">
-        {qoutes.map((quote) => {
-          return (
-            <Quote
-              key={quote.id}
-              content={quote.content}
-              quoted={quote.quoted}
-              author={quote.author}
-              context={quote.context}
-              timestamp={quote.timestamp}
-            />
-          );
-        })}
-      </div>
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Header />
+
+        <Route path="/addQuote" exact component={AddQuoteForm} />
+        <Route path="/" exact component={QuoteContainer} />
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
