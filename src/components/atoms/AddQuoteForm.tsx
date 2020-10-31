@@ -27,7 +27,7 @@ export const AddQuoteForm = () => {
           placeholder="Prøver å få gruppa til å jobbe med MMI"
         />
 
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Add quote" />
       </form>
     </div>
   );

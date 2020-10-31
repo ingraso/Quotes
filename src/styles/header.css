@@ -11,7 +11,15 @@
 #headerContainer h1 {
   margin-top: 0;
   margin-bottom: 4px;
+}
+
+#headerContainer a {
   text-decoration: none;
+  color: #151834;
+}
+
+#headerContainer a:hover {
+  color: #ffffff;
 }
 
 .button {
