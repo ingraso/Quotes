@@ -1,23 +1,18 @@
 import React from "react";
+import { QuoteProps } from "../../models/IQuoteProps";
 import "../../styles/quotes.css";
 
-interface QuoteProps {
-  content: String;
-  quoted: String;
-  author: String;
-  context?: String;
-  timestamp: String;
-}
 
 export const Quote = (props: QuoteProps) => {
+  const {quoted, content, context, author} = props;
   const timestamp = props.timestamp.split("T");
   return (
     <div className="quote">
-      Apparently <b>{props.quoted}</b> said:
-      <h3>{props.content}</h3>
-      {props.context ? <p className="italic">Context: {props.context}</p> : ""}
+      Apparently <b>{quoted}</b> said:
+      <h3>{content}</h3>
+      {context ? <p className="italic">Context: {context}</p> : ""}
       Documented {timestamp[0]} at {timestamp[1]} <br />
-      by {props.author}
+      by {author}
     </div>
   );
 };
