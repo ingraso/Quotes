@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Quote } from "./Quote";
 import * as quoteData from "../../utils/testdata.json";
+import { QuoteProps } from "../../models/IQuoteProps";
+import { quotesRef } from "../../firebaseSetup";
 
 const QuoteContainer = () => {
-  const qoutes = [
-    quoteData.quote1,
-    quoteData.quote2,
-    quoteData.quote3,
-    quoteData.quote4,
-    quoteData.quote5,
-  ];
+
+  const [qoutes, setQuotes] = useState<any>([]);
+
+  useEffect(() => {
+    quotesRef.on('value', (snapshot) => {
+      let items = snapshot.val();
+      let newState = [];
+      for (let item in items) {
+        newState.push({
+          key: item,
+          author: items[item].author,
+          content: items[item].content,
+          context: items[item].context,
+          quoted: items[item].quoted,
+          timestamp: items[item].timestamp
+        });
+      }
+      setQuotes(newState)
+    });
+  },[])
 
   return (
     <div id="quoteContainer">
-      {qoutes.map((quote) => {
+      {qoutes.map((quote : QuoteProps) => {
         return (
           <Quote
-            key={quote.id}
             content={quote.content}
             quoted={quote.quoted}
             author={quote.author}
