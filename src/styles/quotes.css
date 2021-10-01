@@ -7,22 +7,20 @@
 .quote {
   display: inline-block;
   border-radius: 1%;
-  border: 2px solid #0b615b;
   padding: 15px;
   margin: 20px;
   max-width: 300px;
-  background-color: #f2f4f7;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  cursor: pointer;
 }
 
-.quote:hover {
-  border: 2px solid #ffe600;
-  background-color: #ffffff;
+.quote:active {
+  box-shadow: none;
 }
 
 h3 {
-  font-family: sans-serif;
-  font-style: italic;
-  color: #0b615b;
+  color: #0055c0;
 }
 
 .italic {

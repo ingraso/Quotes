@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div id="headerContainer">
-      <h1>
+      <h1 id="title">
         <Link to="/">Spicy sitater fra Krydderhyllen</Link>
       </h1>
       <Link to="/addQuote" className="button submit">
