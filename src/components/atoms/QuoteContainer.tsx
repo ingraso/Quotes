@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Quote } from "./Quote";
-import * as quoteData from "../../utils/testdata.json";
 import { QuoteProps } from "../../models/IQuoteProps";
 import { quotesRef } from "../../firebaseSetup";
 
