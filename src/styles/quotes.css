@@ -30,13 +30,12 @@ h3 {
 /* Add quote form */
 .add-quotes {
   border-radius: 5px;
-  background-color: #45d1c8;
-  color: #151834;
-  border: 2px solid #ffffff;
+  background-color: white;
   padding: 20px;
   width: 80%;
   margin: auto;
   margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .add-quotes h2 {
@@ -55,15 +54,4 @@ input[type="text"] {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #0b615b;
-  color: white;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #0b615b;
-  border-radius: 4px;
-}
-
-input[type="submit"]:hover {
-  cursor: pointer;
-  border: 1px solid #ffffff;
 }
