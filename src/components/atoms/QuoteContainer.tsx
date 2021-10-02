@@ -5,7 +5,7 @@ import { quotesRef } from "../../firebaseSetup";
 
 const QuoteContainer = () => {
 
-  const [qoutes, setQuotes] = useState<any>([]);
+  const [qoutes, setQuotes] = useState<QuoteProps[]>([]);
 
   useEffect(() => {
     quotesRef.on('value', (snapshot) => {
