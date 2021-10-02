@@ -11,7 +11,9 @@ function Header() {
       <Link to="/addQuote" className="button submit">
         Har noen sagt noe dumt?
       </Link>
-      <button className="button random">Vil du ha et tilfeldig sitat?</button>
+      <Link to="/random" className="button random">
+        Vil du ha et tilfeldig sitat?
+      </Link>
     </div>
   );
 }
