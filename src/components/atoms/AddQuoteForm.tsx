@@ -5,14 +5,12 @@ import { QuoteProps } from "../../models/IQuoteProps";
 export const AddQuoteForm = () => {
   const [content, setContent] = useState("");
   const [quoted, setQuoted] = useState("");
-  const [author, setAuthor] = useState("Anonymous");
   const [context, setContext] = useState("");
 
   const submitForm = (e: React.FormEvent<EventTarget>) => {
     const Quote: QuoteProps = {
       content: content,
       quoted: quoted,
-      author: author,
       context: context || undefined,
       timestamp: Date().valueOf(),
     };
