@@ -5,7 +5,7 @@ import { quotesRef } from "../../firebaseSetup";
 
 const QuoteContainer = () => {
 
-  const [qoutes, setQuotes] = useState<QuoteProps[]>([]);
+  const [quotes, setQuotes] = useState<QuoteProps[]>([]);
 
   useEffect(() => {
     quotesRef.on('value', (snapshot) => {
@@ -27,7 +27,7 @@ const QuoteContainer = () => {
 
   return (
     <div id="quoteContainer">
-      {qoutes.map((quote : QuoteProps) => {
+      {quotes.map((quote : QuoteProps) => {
         return (
           <Quote
             content={quote.content}
