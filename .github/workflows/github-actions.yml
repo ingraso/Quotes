@@ -1,0 +1,30 @@
+name: GitHub Actions for Quotes
+run-name: ${{ github.actor }} has pushed some code to the Quotes project!
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Nodejs and npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: Set up yarn
+        run: npm install -g yarn
+
+      - name: Set up Nodejs with yarn caching
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run tests
+        run: yarn test
+
